@@ -1,8 +1,8 @@
 <?php
 require "functions.php";
 
-$name = $_GET['name'];
-$data = json_decode($_GET['data']);
+$name = $_POST['name'];
+$data = json_decode($_POST['data']);
 
 $img = getImage($name,$data);
 

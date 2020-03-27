@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- This is a library for sending requests (AJAX) -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="code.js"></script>
+  <title>Matrix</title>
+</head>
+
+<body>
+  <div class="card">
+    <div class="inside">
+      <header>
+        <h2>
+          Change the way you create matrixs
+        </h2>
+        <h3>
+          give us the numbers and see the magic
+        </h3>
+      </header>
+      <div class="container">
+        <h4>
+          in those boxs put your numbers row by row in the order for the matrix to
+          show in
+        </h4>
+        <div class="rowcount">
+          <input type="button" value="add row" onclick="addrow()">
+          <input type="button" value="del row" onclick="delrow()">
+          <input id="RowVal" type="number" value="3" disabled="true">
+        </div>
+        <div class="colcount">
+          <input type="button" value="add column" onclick="addcol()">
+          <input type="button" value="del column" onclick="delcol()">
+          <input id="ColVal" type="number" value="3" disabled="true">
+        </div>
+        <div class="container2">
+          <div class="form">
+            <div class="matrix">
+
+              <div class="row">
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+              </div>
+              <div class="row">
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+              </div>
+              <div class="row">
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+                <div class="column">
+                  <input class="number" type="number">
+                </div>
+
+              </div>
+            </div>
+            <button onclick="submitMatrix()">
+              Show the matrix
+            </button>
+            <button style="padding: 10px 26px;">
+              Download png
+            </button>
+          </div>
+
+          <div class="imgMatrix">
+            Image goes here!!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
