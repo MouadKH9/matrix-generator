@@ -74,14 +74,6 @@ function submitMatrix() {
 }
 
 function getImageFromServer(matrix) {
-  const formData = new FormData();
   var myImage = document.querySelector("img");
-
-  formData.append("data", JSON.stringify(matrix));
-  formData.append("name", "M");
-
-  axios.post("generate.php", formData).then(res => {
-    console.log(res);
-    myImage.src = "data:image/jpeg;base64," + res.data;
-  });
+  myImage.src = `./generate.php?name=M&data=${JSON.stringify(matrix)}`
 }
